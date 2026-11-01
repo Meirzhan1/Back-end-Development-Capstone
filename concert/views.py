@@ -28,9 +28,9 @@ def songs(request):
 
 
 def photos(request):
-    # photos = []
-    # return render(request, "photos.html", {"photos": photos})
-    pass
+    photos = req.get(
+        "https://raw.githubusercontent.com/captainfedoraskillup/private-get-pictures/main/backend/data/pictures.json").json()
+    return render(request, "photos.html", {"photos": photos})
 
 def login_view(request):
     pass
